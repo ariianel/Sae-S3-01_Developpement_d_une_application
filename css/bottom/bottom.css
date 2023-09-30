@@ -1,0 +1,110 @@
+.bottom-page {
+    margin-top: 300px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#top {
+    display: flex;
+}
+  
+.part {
+    flex: 1;
+    padding: 20px;
+    text-align: center; /* Centre le contenu */
+}
+  
+.part:not(:last-child) {
+    border-right: 2px solid white; /* Augmentation de l'épaisseur */
+}
+  
+.part h3 {
+    padding-top: 3%;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-style: normal; /* Retire l'italique du texte */
+}
+  
+.part p {
+    margin-bottom: 10px;
+    font-style: normal; /* Retire l'italique du texte */
+}
+  
+.part button {
+    margin-top: 2%;
+    padding: 10px 20px;
+    background-color: #005859;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-style: normal; /* Retire l'italique du texte */
+}
+  
+.part button:hover {
+    background-color: #003d46;
+}
+
+#top .one p {
+    font-size: small;
+}
+
+#top .one span {
+    font-size: medium;
+    color: #33C2F2;
+    text-decoration: underline;
+}
+
+#top .one span:hover{
+    color: #30475e;
+    cursor: pointer;
+}
+
+
+.part .icon {
+    margin-top: 5%;
+}
+
+.part.two .icon i {
+    cursor: pointer;
+    margin-right: 2%; /* Ajoute un espace de 22px entre chaque icône */
+}
+
+.bottom-page {
+    height: 231px;
+    background-color: #EDEDED;
+}
+
+.bottom-page #bottom {
+    height: 77px;
+    background-color: #005859;
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Pour occuper toute la largeur de son parent */
+    text-align: center;
+}
+.bottom-page #bottom ul {
+    color: white;
+    padding-top: 2%;
+    list-style: none; /* Pour supprimer les puces de la liste */
+}
+.bottom-page #bottom ul li{
+    font-style: normal;
+    font-size: small;
+   display: inline-block; /* Pour afficher les éléments de la liste en ligne */
+    margin: 0 10px;
+}
+
+@media (max-width: 550px) {
+    .bottom-page {
+        height: 275px; /* Ajustez la hauteur selon votre préférence */
+    }
+    #top .two .icon{
+        padding-top: 10%;
+    }
+    #bottom ul {
+        padding: 0 10% 0 10%;
+    }
+
+}

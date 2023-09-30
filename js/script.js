@@ -1,4 +1,36 @@
+//             DEBUT CODE NAVBAR                //
+var navbar = document.getElementsByClassName('navbar')[0];
+var menu = document.getElementById('menu-icon');
+var kk = document.getElementById('all');
+var header = document.getElementById('main-header'); 
+var isNavbarOpen = false;
 
+// Permet d'ouvrir/fermer navbar de l'hamburger
+function deployMenu() {
+    if (isNavbarOpen) {
+        navbar.style.right = '-100%';  // Fait disparaître la navbar
+    } else {
+        navbar.style.right = '3%';  // Fait apparaître la navbar
+    }
+    
+    isNavbarOpen = !isNavbarOpen;  // Bascule l'état de la navbar (ouverte ou fermée)
+}
+
+menu.onclick = deployMenu;
+menu.addEventListener('click', deployMenu);
+
+// Quand on descend sur la page
+// Modifie le background de la navbar
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+//              FIN CODE NAVBAR                 //
+
+//                 DEBUT DATA                    //
 const data = [
   {
   eventType: "Grandir",
@@ -25,30 +57,20 @@ const data = [
     eventType: "Art",
     title: "Exposition photos 'Insectes' - Taulé",
     description :"En octobre, il vous reste quelques semaines pour découvrir les gros plans de photos d'insectes prises par l'association Bretagne Vivante. Cette expo dévoile un monde fascinant et caché, une biodiversité riche et discrète. Les photos sont prises principalement en Bretagne et Finistère. Pour voir ou revoir l'expo photo : mardi, mercredi, vendredi de 16 h 30 à 18 h 30, mercredi, samedi matin de 10 h à 12 h et samedi après-midi de 14 h à 16 h 30 (heures d'ouverture au public de la médiathèque).",
+    publicationDate: "Publié le 12 juin 2023",
     dateBegin : "01 janv", yearBegin : "2023", dateEnd:"02 nov", yearEnd : "2023"
   },
   {
     eventType: "Art",
     title: "Exposition musée rural de Guimaëc - Guimaëc",
     description :"A partir d'un fond photographique local, de témoignages et de collectages, cette exposition éclaire, en différents tableaux, la vie rude et conviviale des agriculteurs d’autrefois, de 1914 aux années 70. Horaires d'ouverture 2023 : Du 12 avril au 30 juin : mercredi et vendredi de 14H30 à 17h30. Visite sur demande pour les groupes. Tarifs : Individuel : 3€ - Enfant 6 à 12 ans : 2 € Groupe + 10 pers : 2,50 € Groupe enfants : 1,50 €",
+    publicationDate: "Publié le 12 juin 2023",
     dateBegin : "03 mars", yearBegin : "2023", dateEnd:"30 sept", yearEnd : "2023"
   },
 ];
+//                   FIN DATA                   //
 
-
-//Permet d'ajouter un fond à la Navbar
-//Lorsqu'on descend la page
-
-window.addEventListener('scroll', function() {
-  const navbar = document.getElementById('navbar');
-  if (window.scrollY > 0) {
-      navbar.classList.add('active');
-  } else {
-      navbar.classList.remove('active');
-  }
-});
-
-// Permet de trier en fonction du bouton
+// Permet de trier en fonction du bouton selectionné
 $(document).ready(function () {
     var $list = $(".box .rectangle").hide(),
       $curr;
@@ -148,15 +170,8 @@ function afficherAllContent() {
 afficherAllContent();
 
 
-var sidemenu = document.getElementById("sidemenu");
 
-function openmenu(){
-  sidemenu.style.right = "0";
-}    
 
-function closemenu(){
-  sidemenu.style.right = "-200px";
-}
 
 
 
