@@ -1,23 +1,28 @@
 //             DEBUT CODE NAVBAR                //
-var navbar = document.getElementsByClassName('navbar')[0];
-var menu = document.getElementById('menu-icon');
-var kk = document.getElementById('all');
+
 var header = document.getElementById('main-header'); 
-var isNavbarOpen = false;
+
 
 // Permet d'ouvrir/fermer navbar de l'hamburger
-function deployMenu() {
-    if (isNavbarOpen) {
-        navbar.style.right = '-100%';  // Fait disparaître la navbar
-    } else {
-        navbar.style.right = '3%';  // Fait apparaître la navbar
-    }
-    
-    isNavbarOpen = !isNavbarOpen;  // Bascule l'état de la navbar (ouverte ou fermée)
-}
+$(document).ready(function(){
+  //jquery for toggle sub menus
+  $('.sub-btn').click(function(){
+    $(this).next('.sub-menu').slideToggle();
+    $(this).find('.dropdown').toggleClass('rotate');
+  });
 
-menu.onclick = deployMenu;
-menu.addEventListener('click', deployMenu);
+  //jquery for expand and collapse the sidebar
+  $('.menu-btn').click(function(){
+    $('.side-bar').addClass('active');
+    $('.menu-btn').css("visibility", "hidden");
+  });
+
+  $('.close-btn').click(function(){
+    $('.side-bar').removeClass('active');
+    $('.menu-btn').css("visibility", "visible");
+  });
+});
+
 
 // Quand on descend sur la page
 // Modifie le background de la navbar
@@ -29,6 +34,8 @@ window.addEventListener('scroll', () => {
     }
 });
 //              FIN CODE NAVBAR                 //
+
+
 
 //                 DEBUT DATA                    //
 const data = [
@@ -70,6 +77,8 @@ const data = [
 ];
 //                   FIN DATA                   //
 
+
+
 // Permet de trier en fonction du bouton selectionné
 $(document).ready(function () {
     var $list = $(".box .rectangle").hide(),
@@ -91,6 +100,8 @@ $(document).ready(function () {
     });
 });
 
+
+
 $(document).ready(function(){
   // Au chargement de la page, activer le bouton "All"
   $("#all").addClass("active");
@@ -105,7 +116,8 @@ $(document).ready(function(){
   });
 });
 
-const liItem = document.querySelectorAll('.button');  // Sélectionnez les boutons correctement
+
+const liItem = document.querySelectorAll('.button');  // Sélectionne les boutons correctement
 
 liItem.forEach(li => {
   li.onclick = function(event) {
@@ -129,6 +141,7 @@ function afficherDateContent() {
   });
 }
 
+//Affiche toutes les infos dans les rectangles
 function afficherAllContent() {
   afficherDateContent();
   const infoContents = document.getElementsByClassName('info-content');
