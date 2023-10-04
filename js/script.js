@@ -2,6 +2,18 @@
 
 var header = document.getElementById('main-header'); 
 
+function deploySearchBar(){
+  document.getElementsByClassName('mox')[0].style.width = '20%';
+}
+
+function unploySearchBar(){
+  document.getElementsByClassName('mox')[0].style.width = '0';
+}
+
+document.getElementById('searchbar').addEventListener('focus', deploySearchBar);
+document.getElementsByClassName('mox')[0].addEventListener('mouseover', deploySearchBar);
+document.getElementById('searchbar').addEventListener('focusout', unploySearchBar);
+document.getElementsByClassName('mox')[0].addEventListener('mouseout', unploySearchBar);
 
 // Permet d'ouvrir/fermer navbar de l'hamburger
 $(document).ready(function(){
