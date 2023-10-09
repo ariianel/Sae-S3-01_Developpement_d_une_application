@@ -1,0 +1,9 @@
+@import 'actualites.css';
+@import 'events.css';
+
+#quickacces{
+    background-color:red;
+    width:29%;
+    height:10px;
+    display:inline-block;
+}

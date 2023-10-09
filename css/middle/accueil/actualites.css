@@ -1,0 +1,37 @@
+#actualites{
+    width:65%;
+    margin-left:5%;
+    margin-top:50px;
+    margin-bottom:50px;
+    display:inline-block;
+}
+
+#actualites h3{
+    margin-bottom:30px;
+}
+
+#actualites .rectangle{
+    border:none;
+}
+
+.img-content{
+    width:27.5%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#actualites .rectangle .img-content img{
+    width:100%;
+}
+
+#actualites .rectangle .info-content{
+    padding:2%;
+    width:72.5%;
+}
+
+#actu-button{
+    margin:auto;
+    display:block;
+    width:30%;
+}
