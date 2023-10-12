@@ -35,3 +35,7 @@
     display:block;
     width:30%;
 }
+
+#actualites h1{
+    cursor:pointer;
+}

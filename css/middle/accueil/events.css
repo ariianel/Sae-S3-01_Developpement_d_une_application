@@ -12,20 +12,30 @@
     color:white;
 }
 
+.white hr{
+    background-color:white;
+    border-color:white;
+}
+
+.green{
+    color:#004a4c;
+}
+
+.green hr{
+    background-color:#004a4c;
+    border-color:#004a4c;
+}
+
 .title h1{
     margin:0;
 }
 
 .title hr{
-    width:15%;
+    width:12.5%;
     display:inline-block;
     margin:0;
     opacity:1;
-    height:5px;
-}
-
-#white{
-    background-color:white;
+    height:3px;
 }
 
 #vignette{
@@ -35,6 +45,7 @@
 
 .vignette{
     background-image:url('../../../agenda-img/crowd.jpeg');
+    background-position:center;
     background-size: cover;
     display:block;
     width:60%;
@@ -47,17 +58,17 @@
     backdrop-filter:blur(5px);
 }
 
-.title-vignette{
+.filter-vignette{
     backdrop-filter:blur(5px);
     height:100%;
     border-radius:30px;
     font-size:200%;
     vertical-align:middle;
+    display:flex;
+    align-items: center;
+    justify-content:center;
 }
 
-.center-vignette{
-    margin:auto;
-}
 
 #map{
     width:49.5%;

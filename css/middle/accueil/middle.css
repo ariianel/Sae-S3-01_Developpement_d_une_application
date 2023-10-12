@@ -1,5 +1,7 @@
 @import 'actualites.css';
 @import 'events.css';
+@import 'capsule.css';
+@import 'live.css';
 
 #quickacces{
     background-color:red;

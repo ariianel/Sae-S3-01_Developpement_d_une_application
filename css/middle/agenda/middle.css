@@ -170,7 +170,7 @@ button .loadmore {
     font-size: 75%;
 }
 
-.rectangle .info-content button, #actu-button {
+.rectangle .info-content button, #actu-button, .arrow-button {
     background-color:#33C2F2; /* Couleur de fond bleue */
     color: #ffffff; /* Couleur du texte en blanc */
     padding: 10px 20px; /* Espacement intérieur du bouton */

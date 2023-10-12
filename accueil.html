@@ -184,35 +184,88 @@
         <div id="events">
             <div class="title white">
                 <h1>EVENEMENTS</h1>
-                <hr id="white">
+                <hr>
             </div>
             <div id="vignette">
                 <div class="vignette white" id="calendar">
-                    <div class="title-vignette">
+                    <div class="filter-vignette">
                         CALENDRIER
                     </div>
                 </div>
                 <div class="vignette white" id="spectacles">
-                    <div class="title-vignette">
-                        <div class="center-vignette">
-                            SPECTACLES
-                        </div>
+                    <div class="filter-vignette">
+                        SPECTACLES
                     </div>
                 </div>
             </div>
             <div id="map">
-
             </div>
         </div>
-        <div id="capsule">
 
+        <div id="capsule">
+            <div class="title green">
+                <h1>CAPSULE</h1>
+                <hr>
+            </div>
+            <div class="videos">
+                <div class="video" id="lleft-video" value="1">
+                    <div class="play-button">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="video" id="left-video" value="2">
+                    <div class="play-button">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="arrow-button" id="left-button">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="video" id="active-video"  value="3">
+                    <div class="play-button">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="arrow-button" id="right-button">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="video" id="right-video"  value="4">
+                    <div class="play-button">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="video" id="rright-video"  value="5">
+                    <div class="play-button">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="live">
-
+            <div id="live-info">
+                <div class="title white">
+                    <h2>LIVE MORLAIX</h1>
+                    <h6>JOUR NB MOIS ANNEE</h2>
+                    <hr>
+                    <h1>00:00</h1>
+                    <div id="info-meteo">
+                        <div id="icon-meteo">
+                            N
+                        </div>
+                        <div id="content-meteo">
+                            Marée haute
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="live-img">
+            </div>
         </div>
         
         
     </section>
+
+    <!-- <iframe src="https://www.youtube.com/embed/wutdecDrFEs?si=PSXxeuENyXdZsuDF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
     <!--------------- FIN MILIEU DE PAGE -------------->
         <!-- PS : Le Bottom est dans la div middle-page -->
         <!--------------- DEBUT BOTTOM PAGE ---------------->
@@ -253,6 +306,7 @@
         <!--------------- FIN BOTTOM PAGE ---------------->
 
     
+    <script src="./js/accueil/capsule.js" type="text/javascript"></script>
     <script src="./js/script.js" type="text/javascript"></script>
     <script src="./js/navbar.js" type="text/javascript"></script>
 </body>
