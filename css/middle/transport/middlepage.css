@@ -1,0 +1,12 @@
+/* styles.css */
+@import './acces_rapide.css';
+@import './actu.css';
+@import './projet.css';
+@import './annonce.css';
+@import './horaires.css';
+.conteneur {
+    margin: 20px;
+    display: flex; /* Utiliser la mise en page flexbox pour diviser en deux colonnes */
+    gap: 20px; /* Espacement entre les deux colonnes */
+    height: 699px;
+}
