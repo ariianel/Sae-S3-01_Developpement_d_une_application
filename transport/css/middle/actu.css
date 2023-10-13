@@ -1,0 +1,62 @@
+.image-avec-texte {
+    flex: 4; /* Prend la moitié de l'espace disponible */
+    text-align: center;
+    
+
+}
+.animate {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Vous pouvez ajuster la durée et l'effet de transition */
+}
+.image-avec-texte img {
+    width: 200px;
+    height: 130px;
+    margin-right: 2%;
+}
+.image-avec-texte #titre{
+    margin-left: 2%;
+    padding-top: 2%;
+}
+.image-avec-texte #ensembleimgtxt{
+    margin-top: 2%;
+    margin-left: 5%;
+    height: 20%;
+}
+.image-avec-texte #ensembleimgtxt .resume{
+    font-size: 8px;
+    color: #00494A;
+}
+.image-avec-texte #ensembleimgtxt p{
+    font-size: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+.image-avec-texte .date{
+    font-size: 10px;
+    font-style: italic;
+}
+.trait-vert {
+    display: inline-block;
+    width: 40px; /* Largeur du trait vert */
+    height: 2px; /* Hauteur du trait vert */
+    background-color: green; /* Couleur du trait vert */
+    margin-left: 5px; /* Marge à gauche pour l'espacement */
+    vertical-align: middle; /* Alignement vertical au centre par rapport au texte */
+}
+.btnactu {
+    background-color: #33C2F2; /* Couleur de fond bleu azur */
+    color: #ffffff; /* Couleur du texte en blanc */
+    border: none; /* Suppression de la bordure */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 10px 15px; /* Rembourrage interne */
+    cursor: pointer; /* Curseur de la souris en main */
+    font-size: 10px; /* Taille de la police */
+    margin-right: 200px; /* Décaler le bouton vers la gauche */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1); /* Ombre par défaut */
+}
+
+.btnactu:hover {
+    background-color: #0077aa; /* Couleur de fond au survol */
+    
+}

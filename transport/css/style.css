@@ -1,0 +1,19 @@
+@import 'header/header.css';
+@import 'middle/middlepage.css';
+@import 'bottom/bottom.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+

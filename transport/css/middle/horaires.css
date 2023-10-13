@@ -1,0 +1,12 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Crée 4 colonnes égales */
+    grid-gap: 1px; /* Espace entre les colonnes */
+  }
+  
+  .col {
+    padding: 10px;
+    background-color: lightgray; /* Couleur de fond des colonnes */
+    text-align: center;
+    border: 1px solid lightblue; /* Barre verticale bleue claire */
+  }
