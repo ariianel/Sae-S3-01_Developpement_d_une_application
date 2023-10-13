@@ -1,0 +1,361 @@
+/* Variables */
+:root{
+    --bg-color : #222327;
+    --text-color:#fff;
+    --main-color: #004a4c;
+}
+
+/* Début navbar */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0; 
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 0;
+    transition: all .50s ease;
+}
+
+/* Comportement navbar après le scroll */
+header.scrolled {
+    background-color: var(--main-color); 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+header.scrolled ul.navbar li{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.305); 
+}
+
+/* Logo de Morlaix */
+.logo{
+    display: flex;
+    align-items: center;
+    width: 157px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.logo i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 3px;
+}
+
+.logo span{
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Début Menu Navbar */
+.navbar{
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 95%;
+    margin: 0px 10px;
+    
+}
+
+.navbar li a{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 12%;
+    transition: all .50s ease;
+    color: var(--text-color);
+    cursor: pointer;
+    width: 16%;
+    list-style: none;
+    text-decoration: none;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.957); 
+}
+
+.navbar li a:hover {
+    color: var(--main-color);
+}
+
+/* Sous-menus navbar */
+
+.navbar li > ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 30%;
+    border-radius: 10px;
+    display: none;
+    background-color: var(--main-color);
+}
+
+.navbar li:hover > ul {
+    display: block;
+}
+  
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50 ease;
+}
+
+.main a:hover {
+    color: var(--main-color);
+}
+
+/* icon de l'hamburger */
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+/************************************/
+/*********  DEBUT SEARCHBAR ********/
+/************************************/
+
+div.mox{
+    height: 30px;
+    width: 1%;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 10px 25px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: all .20s ease;
+}
+
+.mox:hover input{
+    width: 170px;
+}
+.mox:hover {
+    width: 200px;
+}
+
+.mox input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.mox a .fas{
+    color: var(--main-color);
+    font-size: 18px;
+}
+/************************************/
+/********** FIN SEARCHBAR **********/
+/************************************/
+
+
+
+/************************************/
+/********** DEBUT HAMBURGER **********/
+/************************************/
+
+.side-bar{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: left;
+}
+  
+.side-bar.active{
+    right: 0;
+}
+  
+.side-bar .menu{
+    width: 100%;
+    margin-top: 80px;
+}
+  
+.side-bar .menu .item{
+    position: relative;
+    cursor: pointer;
+}
+  
+.side-bar .menu .item a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.305); 
+}
+  
+.side-bar .menu .item a:hover{
+    background: var(--main-color);
+    transition: 0.3s ease;
+}
+  
+.side-bar .menu .item i{
+    margin-right: 15px;
+}
+  
+.side-bar .menu .item a .dropdown{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+  
+.side-bar .menu .item .sub-menu{
+    background: rgba(255, 255, 255, 0.1);
+    display: none;
+}
+  
+.side-bar .menu .item .sub-menu a{
+    padding-left: 80px;
+}
+  
+.rotate{
+    transform: rotate(90deg);
+}
+  
+.close-btn{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+}
+  
+.menu-btn{
+    display: none;
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    margin: 25px;
+    cursor: pointer;
+    right: 0;
+}
+  
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+  
+.main h1{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 60px;
+    text-align: center;
+    line-height: 80px;
+}
+
+/************************************/
+/********** FIN HAMBURGER **********/
+/************************************/
+
+
+
+
+/************************************/
+/********** RESPONSIVE **********/
+/************************************/
+
+@media (max-width : 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar li {
+        padding: 5px 0;
+        text-align: center;
+        width: 15%;
+    }
+
+
+    .menu-toggle{
+        margin-right: 5%;
+        width: 50%;
+    }
+}
+
+@media (max-width:1237px){
+    .navbar li {
+        width: 13%;
+    }
+    
+}
+
+@media (max-width: 900px){
+    .main h1{
+      font-size: 40px;
+      line-height: 60px;
+    }
+}
+
+@media (max-width:1090px)
+{
+    .menu-btn {
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 50vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+        padding-right: 10%;
+    }
+    div.mox {
+        position: absolute;
+        top: 19px;
+        right: 60px;
+        margin: 10px 0;
+    }
+
+    .navbar li a {
+        display: block;
+        margin: 5px 0;
+        transition: all .50s ease;
+    }
+    .navbar li a:hover {
+        color: var(--text-color);
+    }
+    .navbar li a.active {
+        color: var(--text-color);
+    }
+
+
+}
