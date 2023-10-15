@@ -1,0 +1,35 @@
+.acces-rapide {
+    flex: 1; /* Prend la moitié de l'espace disponible */
+    margin-left: 2%;
+    margin-top: 2%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    height: 80%;
+    border-radius: 5%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Ajoute de l'ombre */
+}
+h3 {
+    margin-bottom: 20px;
+    margin-left: 20px; 
+}
+.btn-carre {
+    background-color: #ECECEC;
+    border-radius: 0; /* Désactivez les coins arrondis */
+    margin-left: 10%;
+    border: none;
+    opacity: 0; /* Rend les boutons invisibles */
+}
+.btn-carre i {
+    color: #00494A;
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+}
+.btn-carre:hover {
+    background-color: #5174C8;
+}
+.texte-vert {
+    color: #00494A;
+}
+.image-avec-texte {
+    flex: 4; /* Prend la moitié de l'espace disponible */
+    text-align: center;
+}

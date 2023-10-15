@@ -1,0 +1,28 @@
+.projet #bus{
+    margin-top: -5%;
+    width: 20%;
+}
+.projet #barre{
+    margin-left: 15%;
+    width: 70%;
+}
+.liste-horizontale {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Supprime la marge intérieure */
+    text-align: center; /* Centre le texte */
+    margin-top: 2%;
+}
+
+.liste-horizontale li {
+    display: inline; /* Affiche les éléments en ligne */
+}
+
+.liste-horizontale li:not(:last-child) {
+    margin-right: 18%; /* Ajoute de la marge à tous les éléments sauf le dernier */
+}
+
+/* Espacement spécifique pour certains éléments */
+.liste-horizontale li:nth-child(2) {
+    margin-right: 17%; /* Espacement différent pour le 2e élément */
+}
+

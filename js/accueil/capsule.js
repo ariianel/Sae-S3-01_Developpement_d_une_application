@@ -4,20 +4,46 @@ var videos = document.getElementsByClassName("video");
 var idVideos = ["lleft-video", "left-video", "active-video", "right-video", "rright-video"];
 var buttonVideos = document.getElementsByClassName("play-button");
 
-rightButton.onclick = function () {
+function removeEvent(){
+    var playButton = document.createElement('div');
+    playButton.className = 'play-button';
+    playButton.innerHTML = "<i class='fa-solid fa-play'></i>"
+    playButton.addEventListener('mouseover', growButton);
+    playButton.addEventListener('mouseout', reduceButton);
+
+    var active = document.getElementById('active-video');
+    active.innerHTML = "";
+    active.appendChild(playButton);
+    active.removeEventListener('click', playVideo);
+
+    document.getElementById('left-video').removeEventListener('click', turnLeft);
+    document.getElementById('right-video').removeEventListener('click', turnRight);
+}
+
+function addEvent(){
+    document.getElementById('active-video').addEventListener('click', playVideo);
+    document.getElementById('left-video').addEventListener('click', turnLeft);
+    document.getElementById('right-video').addEventListener('click', turnRight);
+}
+
+function turnRight(){
+    removeEvent();
     var i = 0;
     for (;i<5;++i){
         var j = idVideos.indexOf(videos[i].id)-1;
         videos[i].id = idVideos[(j < 0) ? 4 : j];
     }
+    addEvent();
 }
 
-leftButton.onclick = function () {
+function turnLeft(){
+    removeEvent();
     var i = 0;
     for (;i<5;++i){
         var j = idVideos.indexOf(videos[i].id)+1;
         videos[i].id = idVideos[(j > 4) ? 0 : j];
     }
+    addEvent();
 }
 
 function growButton(){
@@ -42,14 +68,17 @@ function getShadow(){
 
 function playVideo(){
     this.removeChild(this.getElementsByClassName('play-button')[0]);
-    this.style.backgroundImage = 'none';
-    this.innerHTML = "<iframe src='https://www.youtube.com/embed/wutdecDrFEs?si=PSXxeuENyXdZsuDF' title='YouTube video player' autoplay='true' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>";
+    this.innerHTML = "<iframe src='https://www.youtube.com/embed/" + this.getAttribute('value') + "?&autoplay=1' frameborder='0' allowfullscreen></iframe>";
 }
+
+addEvent();
+leftButton.addEventListener('click', turnLeft);
+rightButton.addEventListener('click', turnRight);
 
 for (var i = 0;i<buttonVideos.length;++i){
     buttonVideos[i].addEventListener('mouseover', growButton);
     buttonVideos[i].addEventListener('mouseout', reduceButton);
     videos[i].addEventListener('mouseover', dropShadow);
     videos[i].addEventListener('mouseout', getShadow);
-    videos[i].addEventListener('click', playVideo);
 }
+

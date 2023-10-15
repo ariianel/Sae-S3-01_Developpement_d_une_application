@@ -1,0 +1,74 @@
+/* styles.css */
+.conteneur {
+    display: flex; /* Utiliser la mise en page flexbox pour diviser en deux colonnes */
+    gap: 20px; /* Espacement entre les deux colonnes */
+    border: solid 3px;
+    height: 699px;
+    width: auto;
+    padding: 0;
+}
+
+.acces-rapide {
+    flex: 1; /* Prend la moitié de l'espace disponible */
+    margin-left: 2%;
+    margin-top: 2%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    height: 80%;
+    border-radius: 5%;  
+
+}
+h3 {
+    margin-bottom: 20px;
+    margin-left: 20px; 
+}
+.btn-carre {
+    background-color: #ECECEC;
+    border-radius: 0; /* Désactivez les coins arrondis */
+    margin-left: 10%;
+    border: none;
+}
+.btn-carre i {
+    color: #00494A;
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+}
+.btn-carre:hover {
+    background-color: #5174C8;
+}
+.texte-vert {
+    color: #00494A;
+}
+.image-avec-texte {
+    flex: 4; /* Prend la moitié de l'espace disponible */
+    text-align: center;
+}
+
+.content-container {
+    display: block;
+    border:none;
+    padding: 0;
+    margin:0;
+    height: 200px;
+}
+.image-avec-texte img1 {
+    max-width: 100%;
+    height: auto;
+    margin-right: 2%;
+}
+.image-avec-texte #titre{
+    margin-left: 5%;
+    padding-top: 5%;
+    border: 3px solid;
+}
+.image-avec-texte #ensembleimgtxt{
+    margin-top: 3%;
+    margin-left: 5%;
+}
+.image-avec-texte #ensembleimgtxt .resume{
+    font-size: 10px;
+    color: #00494A;
+}
+.image-avec-texte .date{
+    font-size: 10px;
+    font-style: italic;
+}
