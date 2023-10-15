@@ -32,6 +32,4 @@ h3 {
 .image-avec-texte {
     flex: 4; /* Prend la moitié de l'espace disponible */
     text-align: center;
-    
-
 }

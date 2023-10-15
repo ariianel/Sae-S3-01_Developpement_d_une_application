@@ -113,6 +113,7 @@ button .loadmore {
 }
 /* FIN contenue d'actualités*/
 
+
 .rectangle {
     display: flex;
     font-style: normal;
@@ -120,6 +121,7 @@ button .loadmore {
 }
 
 .rectangle .date-content{
+    padding-right: 2%;
     color: #005859;
     width: 10%;
     margin-left: 2%;
