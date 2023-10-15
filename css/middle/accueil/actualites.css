@@ -39,3 +39,7 @@
 #actualites h1{
     cursor:pointer;
 }
+
+#actualites p{
+    text-align:left;
+}

@@ -73,7 +73,7 @@ hr {
 
 .rectangle {
     width: 97%;
-    height: 250px;
+    /*height: 250px;*/
     margin-bottom: 2%;
     border: 1px solid #ccc;
     background-color: rgb(255, 255, 255);
@@ -116,7 +116,7 @@ button .loadmore {
 .rectangle {
     display: flex;
     font-style: normal;
-    height: 40%;
+    /*height: 40%;*/
 }
 
 .rectangle .date-content{

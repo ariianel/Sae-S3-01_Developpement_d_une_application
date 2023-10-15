@@ -3,7 +3,7 @@
     display: flex; /* Utiliser la mise en page flexbox pour diviser en deux colonnes */
     gap: 20px; /* Espacement entre les deux colonnes */
     border: solid 3px;
-    height: 699px;
+    /*height: 699px;*/
     width: auto;
     padding: 0;
 }

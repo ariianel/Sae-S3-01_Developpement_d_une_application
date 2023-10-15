@@ -2,10 +2,3 @@
 @import 'events.css';
 @import 'capsule.css';
 @import 'live.css';
-
-#quickacces{
-    background-color:red;
-    width:29%;
-    height:10px;
-    display:inline-block;
-}
