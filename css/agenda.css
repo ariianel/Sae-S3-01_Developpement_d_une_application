@@ -1,0 +1,32 @@
+@import 'header/header.css';
+
+@import './middle/agenda/filterbutton.css';
+@import './middle/agenda/middle.css';
+@import './middle/agenda/slider.css';
+
+@import 'bottom/bottom.css';
+@import '../css/middle/transport/acces_rapide.css';
+
+.conteneur {
+    margin: 20px;
+    display: flex; /* Utiliser la mise en page flexbox pour diviser en deux colonnes */
+    gap: 20px; /* Espacement entre les deux colonnes */
+    height: 699px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
