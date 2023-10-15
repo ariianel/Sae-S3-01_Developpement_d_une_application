@@ -96,6 +96,11 @@
     margin: 0 10px;
 }
 
+.bottom-page #bottom ul li:hover {
+    cursor: pointer;
+    color: rgb(199, 199, 199);
+}
+
 @media (max-width: 550px) {
     .bottom-page {
         height: 275px; /* Ajustez la hauteur selon votre préférence */

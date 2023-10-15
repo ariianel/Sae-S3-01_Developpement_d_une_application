@@ -1,6 +1,8 @@
 @import 'header/header.css';
 @import 'middle/middlepage.css';
 @import 'bottom/bottom.css';
+@import './middle/agenda/slider.css';
+@import '../transport/css/middle/acces_rapide.css';
 
 * {
     margin: 0;
@@ -18,6 +20,5 @@ body{
 html{
     scroll-behavior: smooth;
 }
-
 
 
