@@ -4,8 +4,6 @@ var videos = document.getElementsByClassName("video");
 var idVideos = ["lleft-video", "left-video", "active-video", "right-video", "rright-video"];
 var buttonVideos = document.getElementsByClassName("play-button");
 
-
-
 function removeEvent(){
     var playButton = document.createElement('div');
     playButton.className = 'play-button';
