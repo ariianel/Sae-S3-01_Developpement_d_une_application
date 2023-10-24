@@ -1,4 +1,13 @@
-@import 'middlepage.css';
+@import 'header/header.css';
+@import 'middle/middlepage.css';
+@import 'bottom/bottom.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    box-sizing: border-box;
+}
 
 html{
     margin: 0;
@@ -6,13 +15,12 @@ html{
     scroll-behavior: smooth;
     
 }
-
-body{
-    padding: 0;
+body {
     margin: 0;
-    background-color: white;
-    background-size: cover;
+    padding: 0;
+    width: 1450px; /* Utilisez la largeur complète de l'écran */
 }
+/*Accordion Effect on Hover*/
 .ctr-accordion{
     text-align: center;
     max-width: 1500px;
@@ -21,23 +29,23 @@ body{
     flex-direction: row;
     align-items: center;
     align-content: space-around;
-    gap: 20px;
+    gap: 5px;
     overflow: hidden;
-    margin-left: auto;
     background-color: #004a4c;
+    margin-top: 10px;
 }
 .tab{
     text-align: center;
     position: relative;
-    width: 20%;
-    height: inherit;
-    padding: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
+    width: 15%;
+    height: 470px;
+    padding: 10px;
+    margin-left: 80px;
     background: rgb(150,150,150);
     cursor: pointer;
     transition: width .5s ease;
     border-radius: 25px;
+
 }
 .tab img{
     text-align: center;
@@ -56,6 +64,43 @@ body{
 .tab:hover{
     width: 80%;
 }
+.text-overlay {
+    text-align: center;
+    position: relative;
+    top: 50%; /* Ajustez la position verticale au besoin */
+    left: 50%; /* Ajustez la position horizontale au besoin */
+    transform: translate(-50%, -50%); /* Centre le texte */
+    color: white; /* Couleur du texte */
+    padding: 30px; /* Espacement interne du texte */
+    border-radius: 5px; /* Coins arrondis du fond */
+    font-size: 30px;
+    text-decoration: underline;
+
+}
+.text-overlay1 {
+    text-align: center;
+    position: relative;
+    top: 50%; /* Ajustez la position verticale au besoin */
+    left: 50%; /* Ajustez la position horizontale au besoin */
+    transform: translate(-50%, -50%); /* Centre le texte */
+    color: white; /* Couleur du texte */
+    padding: 30px; /* Espacement interne du texte */
+    border-radius: 5px; /* Coins arrondis du fond */
+    font-size: 30px;
+    text-decoration: underline;
+}
+.text-overlay2 {
+    text-align: center;
+    position: relative;
+    top: 50%; /* Ajustez la position verticale au besoin */
+    left: 50%; /* Ajustez la position horizontale au besoin */
+    transform: translate(-50%, -50%); /* Centre le texte */
+    color: white; /* Couleur du texte */
+    padding: 30px; /* Espacement interne du texte */
+    border-radius: 5px; /* Coins arrondis du fond */
+    font-size: 30px;
+    text-decoration: underline;
+}
 
 /* Styles pour positionner l'image en haut et collée */
 .top-img {
@@ -70,168 +115,321 @@ body{
 }
 .top-img2{
     width: 800px;
-    height: auto;
-    left: 1300px;
-    object-fit: cover;
-    border-radius: 50%;
-    shape-outside: margin-box;
-    margin: 0 20px 5px 0;
-
+    height: 400px;
+    object-fit: cover; 
 }
 
-.container2{
-    width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 15px 15px 30px rgba(0,0,0,0.3);
-    background-color: #004a4c;
-}
-.container2 p {
-    line-height: 1,4;
-    font-size: 20px;
-}
-
-#date-actuelle {
-  font-size: 40px;
-  font-weight: bold;
-  background-color: #004a4c; /* Couleur d'arrière-plan ajoutée */
-  margin-top: 10px;
-}
-
-#date {
-  font-size: 40px;
-  font-weight: normal;
-
-}
-
-
-
-
-
-
+/**/
 .text-over{
     position: absolute;
-    left: 75%;
-    top: 350px;
-    transform: translate(-50%,-50%);
+    left: 70%;
+    top: 255px;
     font-size: 30px;
     color: ghostwhite;
 }
 
+/*H1*/
 .text-line{
     text-align: center;
     width: 50%;
     height: 50%; 
     left: 3000px;
-    margin-top: 50%;
-    margin-left: 50%;
-    font-size: 20px;
-    font-weight: lighter;
+    margin-top: 30px;
+    margin-left: 22%;
+    font-size: 30px;
     transform: translate(-50%,-50%);
-    border-bottom: 2px solid black;
-    display: inline-block;
-    width: 20%;
+    white-space: nowrap;
 
 }
-.text-line2{
+.text-line::after {
+  content: '';
+  display: block;
+  width: 60%; /* Ajustez la longueur du soulignement en pourcentage */
+  height: 2px; /* Épaisseur du soulignement */
+  background-color: #004a4c; /* Couleur du soulignement */
+  margin: 0 auto; /* Centrer le soulignement */
+}
+.text-line1{
     text-align: center;
-    width: 60%;
+    width: 50%;
     height: 50%; 
-    left: 1000px;
+    left: 3000px;
     margin-top: 30px;
     margin-left: 50%;
-    font-size: 25px;
-    font-family: 'Karla', sans-serif;
-    font-weight: lighter;
+    font-size: 30px;
     transform: translate(-50%,-50%);
-    border-bottom: 2px solid black;
-    display: inline-block;
-    width: 20%;
 }
-
-.conteneur1 {
-  display: flex;
-  align-items: center;
-}
-
-.img-container{
-    text-align: center;
-}
-.img-container img {
-  margin: 0 100px; 
-}
-
-.grosse-image img {
-  margin-top: 40%;
-  width: 500px; /* Ajustez la largeur des petites images selon vos besoins */
-  height: auto;
-}
-.petite-image img {
-  margin-top: 40%;
-  width: 300px; /* Ajustez la largeur des petites images selon vos besoins */
-  height: auto;
-  margin: 2 20px; /* Ajoute de la marge entre les petites images */
+.text-line1::after {
+  content: '';
+  display: block;
+  width: 20%; /* Ajustez la longueur du soulignement en pourcentage */
+  height: 2px; /* Épaisseur du soulignement */
+  background-color: #004a4c; /* Couleur du soulignement */
+  margin: 0 auto; /* Centrer le soulignement */
 }
 
 
-
-/* Styles pour les écrans larges */
-@media (min-width: 1200px) {
-    /* Ajoutez ici les styles pour les écrans larges */
-    .ctr-accordion {
-        max-width: 2200px;
+/*survol*/
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+    margin-left: -460px;
     }
-
-    .tab {
-        width: 15%;
-    }
+.grosse-image{
+    width: 600px;
+    position: relative;
+}
+.grosse-image img{
+    width: 100%;
+    display: block;
+    margin: 2 5px;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+    border: 2px solid white;
+}
+.text-content {
+    border: 2px solid white; 
+    width: 550px;
+    height: 350px;
+}
+.content:hover{
+    opacity: 1;
+}
+.content h1{
+    font-size: 25px;
+    color: white;
+    text-decoration: underline;
+    margin-top: 30%;
+    margin-left: 30px;
 }
 
-/* Styles pour les tablettes */
-@media (max-width: 1199px) and (min-width: 768px) {
-    /* Ajoutez ici les styles pour les tablettes */
-    .ctr-accordion {
-        max-width: 768px;
-    }
-
-    .tab {
-        width: 25%;
-    }
+/*survol*/
+.wrapper1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+    margin-left: 100px;
+}
+.petite-image1{
+    width: 300px;
+    position: relative;
+}
+.petite-image1 img{
+    width: 100%;
+    display: block;
+    margin: 0 -120px;
+}
+.content1{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+    margin: 0 -120px;
+}
+.text-content1 {
+    margin-top:  -50px;
+    border: 2px solid white; 
+    width: 270px;
+    height: 160px;
+}
+.content1:hover{
+    opacity: 1;
+}
+.content1 h1{
+    margin-top: 15%;
+    margin-left: 30px;
+    font-size: 20px;
+    color: white;
+    text-decoration: underline;
+}
+.content1 p {
+    font-size: 15px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.content1 > *{
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+.content1:hover > *{
+    transform: translateY(25px);
 }
 
-/* Styles pour les smartphones */
-@media (max-width: 767px) {
-    /* Ajoutez ici les styles pour les smartphones */
-    .ctr-accordion {
-        max-width: 100%;
-    }
+/*survol*/
+.wrapper2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 330px;
+    margin-left: -400px;
+}
+.petite-image2{
+    width: 300px;
+    position: relative;
+}
+.petite-image2 img{
+    width: 100%;
+    display: block;
+    margin: 0 -62px;
+}
+.content2{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+    margin: 0 -62px;
+}
+.text-content2 {
+    margin-top:  -50px;
+    border: 2px solid white; 
+    width: 270px;
+    height: 160px;
+}
+.content2:hover{
+    opacity: 1;
+}
+.content2 h1{
+    margin-top: 15%;
+    margin-left: 20px;
+    font-size: 20px;
+    color: white;
+    text-decoration: underline;
+}
+.content2 p {
+    font-size: 15px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.content2 > *{
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+.content2:hover > *{
+    transform: translateY(25px);
+}
 
-    .tab {
-        width: 50%;
-    }
+/*Météo*/
+#live{
+    background-color: #004a4c;
+    margin-top: 185px;
 
-    .text-over {
-        left: 50%;
-    }
+}
+#live-info{
+    width:30%;
+    height: 100px;
+    display:inline-block;
+    padding-top:2.5%;
+}
+#live h6{
+    margin-top:30px;
+    
+}
+#live-img{
+    width:69.65%;
+    height:300px;
+    display:inline-block;
+    background-image:url('../../../img/tourisme/meteoimg.jpg');
+    background-size:cover;
+    background-position:center;
+    border-left:1px solid white;
+    vertical-align: top;
+}
+#live-img img{
+    width:100%;
+    height:100%;
+}
+#info-meteo{
+    margin-top:10px;
+}
+#icon-meteo{
+    width:49%;
+    height: 20px ;
+    display:inline-block;
+    border-right:2px solid white;
+    text-align:right;
+    padding-right:40px;
+}
+#content-meteo{
+    text-align:left;
+    margin-left:0;
+    width:49%;
+    display:inline-block;
+}
 
-    .text-line2 {
-        width: 90%;
+/*Slide 3D*/
+.box body{
+    background-color: #DCDCDC;
+}
+.box {
+    
+    position: relative;
+    width: 100px;
+    height: auto;
+    transform-style: preserve-3d;
+    animation: animate 50s linear infinite;
+    background-color: #DCDCDC;
+}
+@keyframes animate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
     }
-
-    .conteneur1 {
-        flex-direction: column;
-        align-items: flex-start;
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
     }
-
-    .img-container img {
-        margin: 0 20px;
-        width: 80%;
-    }
-
-    .grosse-image img,
-    .petite-image img {
-        width: 100%;
-        margin-top: 10%;
-    }
+}
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+}
+.box span img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
