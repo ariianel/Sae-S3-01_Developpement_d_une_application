@@ -2,7 +2,6 @@
 .conteneur {
     display: flex; /* Utiliser la mise en page flexbox pour diviser en deux colonnes */
     gap: 20px; /* Espacement entre les deux colonnes */
-    border: solid 3px;
     /*height: 699px;*/
     width: auto;
     padding: 0;
@@ -58,7 +57,6 @@ h3 {
 .image-avec-texte #titre{
     margin-left: 5%;
     padding-top: 5%;
-    border: 3px solid;
 }
 .image-avec-texte #ensembleimgtxt{
     margin-top: 3%;

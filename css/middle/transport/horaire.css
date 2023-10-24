@@ -1,0 +1,16 @@
+.horaire{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.horaire img {
+    margin-right: 10px; 
+    width: auto;
+}
+.plan{
+    width: auto;
+    margin-left: 15%;
+}
+.plan img{
+    margin-top: 20px;
+}

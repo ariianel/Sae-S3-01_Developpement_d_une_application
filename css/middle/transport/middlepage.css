@@ -4,6 +4,7 @@
 @import './projet.css';
 @import './annonce.css';
 @import './horaires.css';
+@import './horaire.css';
 .conteneur {
     margin: 20px;
     display: flex; /* Utiliser la mise en page flexbox pour diviser en deux colonnes */

@@ -18,7 +18,7 @@
 }
 
 .liste-horizontale li:not(:last-child) {
-    margin-right: 18%; /* Ajoute de la marge à tous les éléments sauf le dernier */
+    margin-right: 15%; /* Ajoute de la marge à tous les éléments sauf le dernier */
 }
 
 /* Espacement spécifique pour certains éléments */
