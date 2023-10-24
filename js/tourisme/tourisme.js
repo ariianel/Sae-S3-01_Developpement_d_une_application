@@ -1,40 +1,63 @@
+
 //              DEBUT CODE ACCES                //
 $(document).ready(function () {
-  var buttons = $('.btn-carre');
-
-  function moveButtons() {
-    buttons.each(function (index) {
-      var button = $(this);
-      var initialMargin = button.css('margin-left');
-      var initialOpacity = 0; // Opacité initiale à 0
-      button.css('margin-left', '25%');
-      button.css('opacity', initialOpacity); // Opacité initiale à 0
-      
-      setTimeout(function () {
-        button.animate({ 'margin-left': initialMargin, 'opacity': 1 }, 1000); // Animation pour revenir à la position initiale et devenir visible
-      }, index * 400);
+    // Sélectionnez les boutons que vous souhaitez animer
+    var buttons = $('.btn-carre');
+    var buttonContainer = $('.btn-group-vertical');
+    var containerWidth = buttonContainer.width();
+  
+    // Créez un observateur Intersection Observer
+    var observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          // Si le bouton est dans la fenêtre d'affichage
+          var button = entry.target;
+          var initialMargin = $(button).css('margin-left');
+          var initialOpacity = 0;
+          
+          // Appliquez une animation pour augmenter progressivement l'opacité
+          $(button).css('margin-left', '25%');
+          $(button).animate({ 'margin-left': initialMargin, 'opacity': 1 }, 1000);
+  
+          // Arrêtez d'observer ce bouton pour éviter de répéter l'animation
+          observer.unobserve(button);
+        }
+      });
+    }, {
+      threshold: 0.8 // Déclenchez l'animation lorsque la moitié de l'élément est visible
     });
-  }
-
-  moveButtons();
-});
-
-function afficherDateEnTempsReel() {
-  var dateElement = document.getElementById("date");
   
-  function mettreAJourDate() {
-    var dateActuelle = new Date();
-    var options = { day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-    var dateFormatee = dateActuelle.toLocaleDateString('fr-FR', options);
-    
-    dateElement.textContent = dateFormatee;
-  }
+    // Ajoutez chaque bouton à l'observateur
+    buttons.each(function (index) {
+      observer.observe(this);
+    });
   
-  // Mettez à jour la date initiale
-  mettreAJourDate();
+    // Fixez la largeur du conteneur pour éviter les changements pendant l'animation
+    buttonContainer.css('width', containerWidth + 'px');
+  });
   
-  // Mettez à jour la date chaque seconde
-  setInterval(mettreAJourDate, 1000);
-}
-
-afficherDateEnTempsReel();
+  
+  
+  $(document).ready(function () {
+    // Sélectionnez les éléments d'image et de texte à l'intérieur de .image-avec-texte
+    var elementsToAnimate = $('.image-avec-texte img, .image-avec-texte p');
+  
+    // Réglez l'opacité initiale des éléments à 0 pour les rendre invisibles
+    elementsToAnimate.css('opacity', '0');
+  
+    // Fonction pour animer les éléments lorsque la page est défilée
+    function animateElements() {
+        elementsToAnimate.each(function () {
+            var element = $(this);
+            var delay = element.index() * 300; // Espacement entre les animations
+  
+            setTimeout(function () {
+                // Utilisez jQuery pour animer l'opacité de 0 à 1 pour les rendre progressivement visibles
+                element.animate({ 'opacity': '1' }, 1000); // Ajustez la durée de l'animation ici
+            }, delay);
+        });
+    }
+  
+    // Appelez la fonction pour lancer l'animation lorsque la page est défilée
+    animateElements(); // Lancez l'animation au chargement de la page
+  });
