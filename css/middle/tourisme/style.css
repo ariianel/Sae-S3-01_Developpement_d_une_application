@@ -299,7 +299,7 @@ body {
 .petite-image2 img{
     width: 100%;
     display: block;
-    margin: 0 -62px;
+    margin: 0 -80px;
 }
 .content2{
     width: 100%;
@@ -314,7 +314,7 @@ body {
     flex-direction: column;
     opacity: 0;
     transition: 0.6s;
-    margin: 0 -40px;
+    margin: 0 -80px;
 }
 .text-content2 {
     margin-top:  -50px;
