@@ -1,16 +1,8 @@
-/* styles.css */
-.conteneur {
-    margin: 40px;
-    display: flex; /* Utiliser la mise en page flexbox pour diviser en deux colonnes */
-    gap: 20px; /* Espacement entre les deux colonnes */
-}
-
-
 .acces-rapide {
     flex: 1; /* Prend la moitié de l'espace disponible */
     margin-left: 2%;
     margin-top: 2%;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #ddd;
     height: 80%;
     border-radius: 5%;
@@ -23,7 +15,7 @@ h3 {
 .btn-carre {
     background-color: #ECECEC;
     border-radius: 0; /* Désactivez les coins arrondis */
-    margin-left: 10%;
+    margin-left: 10px;
     border: none;
     opacity: 0; /* Rend les boutons invisibles */
 }
@@ -40,37 +32,4 @@ h3 {
 .image-avec-texte {
     flex: 4; /* Prend la moitié de l'espace disponible */
     text-align: center;
-}
-
-
-
-.content-container {
-    background-color: ;
-    display: block;
-    border:none;
-    padding: 0;
-    margin:0;
-    height: 200px;
-}
-.image-avec-texte img1 {
-    max-width: 100%;
-    height: auto;
-    margin-right: 2%;
-}
-.image-avec-texte #titre{
-    margin-left: 5%;
-    padding-top: 5%;
-    border: 3px solid;
-}
-.image-avec-texte #ensembleimgtxt{
-    margin-top: 3%;
-    margin-left: 5%;
-}
-.image-avec-texte #ensembleimgtxt .resume{
-    font-size: 10px;
-    color: #00494A;
-}
-.image-avec-texte .date{
-    font-size: 10px;
-    font-style: italic;
 }
