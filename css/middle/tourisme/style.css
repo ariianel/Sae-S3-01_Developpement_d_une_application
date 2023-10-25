@@ -18,7 +18,6 @@ html{
 body {
     margin: 0;
     padding: 0;
-    width: 1450px; /* Utilisez la largeur complète de l'écran */
 }
 /*Accordion Effect on Hover*/
 .ctr-accordion{
