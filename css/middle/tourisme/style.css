@@ -18,9 +18,11 @@ html{
 body {
     margin: 0;
     padding: 0;
+    width: 100%; /* Utilisez la largeur complète de l'écran */
 }
 /*Accordion Effect on Hover*/
 .ctr-accordion{
+    justify-content: center;
     text-align: center;
     max-width: 1500px;
     height: 500px;
@@ -28,10 +30,10 @@ body {
     flex-direction: row;
     align-items: center;
     align-content: space-around;
-    gap: 5px;
+    gap: 2;
     overflow: hidden;
     background-color: #004a4c;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 .tab{
     text-align: center;
@@ -61,7 +63,7 @@ body {
     opacity: 0.6;
 }
 .tab:hover{
-    width: 80%;
+    width: 40%;
 }
 .text-overlay {
     text-align: center;
@@ -72,8 +74,9 @@ body {
     color: white; /* Couleur du texte */
     padding: 30px; /* Espacement interne du texte */
     border-radius: 5px; /* Coins arrondis du fond */
-    font-size: 30px;
-    text-decoration: underline;
+    font-size: 30px; 
+    text-shadow: 2px 2px 4px #000000; 
+    font-weight: bold;
 
 }
 .text-overlay1 {
@@ -86,7 +89,8 @@ body {
     padding: 30px; /* Espacement interne du texte */
     border-radius: 5px; /* Coins arrondis du fond */
     font-size: 30px;
-    text-decoration: underline;
+    text-shadow: 2px 2px 4px #000000; 
+    font-weight: bold;
 }
 .text-overlay2 {
     text-align: center;
@@ -98,7 +102,8 @@ body {
     padding: 30px; /* Espacement interne du texte */
     border-radius: 5px; /* Coins arrondis du fond */
     font-size: 30px;
-    text-decoration: underline;
+    text-shadow: 2px 2px 4px #000000; 
+    font-weight: bold;
 }
 
 /* Styles pour positionner l'image en haut et collée */
@@ -134,11 +139,11 @@ body {
     height: 50%; 
     left: 3000px;
     margin-top: 30px;
-    margin-left: 22%;
+    margin-left: 30%;
     font-size: 30px;
     transform: translate(-50%,-50%);
     white-space: nowrap;
-
+    text-shadow: 2px 2px 4px #000000;
 }
 .text-line::after {
   content: '';
@@ -153,10 +158,12 @@ body {
     width: 50%;
     height: 50%; 
     left: 3000px;
-    margin-top: 30px;
-    margin-left: 50%;
+    margin-top: 80px;
+    margin-left: 53%;
     font-size: 30px;
     transform: translate(-50%,-50%);
+    text-shadow: 2px 2px 4px #000000;
+
 }
 .text-line1::after {
   content: '';
@@ -167,6 +174,9 @@ body {
   margin: 0 auto; /* Centrer le soulignement */
 }
 
+.conteneur{
+    margin-top: 50px;
+}
 
 /*survol*/
 .wrapper{
@@ -175,7 +185,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 130px;
-    margin-left: -460px;
+    margin-left: -560px;
     }
 .grosse-image{
     width: 600px;
@@ -348,7 +358,7 @@ body {
 /*Météo*/
 #live{
     background-color: #004a4c;
-    margin-top: 185px;
+    margin-top: 300px;
 
 }
 #live-info{
@@ -398,7 +408,7 @@ body {
     background-color: #DCDCDC;
 }
 .box {
-    
+    margin-top: 50px;
     position: relative;
     width: 100px;
     height: auto;
