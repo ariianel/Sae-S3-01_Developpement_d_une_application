@@ -17,12 +17,17 @@
 .middle-page .path-content span {
     color: #33C2F2;
     text-decoration: underline;
-    color: #33C2F2;
     cursor: pointer;
 }
 
-.middle-page .path-content span:hover{
+.middle-page .path-content span a{
+    text-decoration: none;
+    color: #33C2F2;
+}
+
+.middle-page .path-content span a:hover{
     color: #30475e;
+    text-decoration: none;
 }
 
 /* trait gris*/

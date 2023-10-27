@@ -79,6 +79,11 @@
     justify-content:center;
 }
 
+.filter-vignette a {
+    text-decoration: none;
+    color: white;
+}
+
 
 #map{
     width:49.5%;
