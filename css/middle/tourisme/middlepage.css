@@ -2,7 +2,7 @@
     flex: 1; /* Prend la moitié de l'espace disponible */
     margin-left: 2%;
     margin-top: 2%;
-    padding: 30px;
+    padding: 20px;
     border: 1px solid #ddd;
     height: 80%;
     border-radius: 5%;
@@ -15,9 +15,10 @@ h3 {
 .btn-carre {
     background-color: #ECECEC;
     border-radius: 0; /* Désactivez les coins arrondis */
-    margin-left: 10px;
+    margin-left: 0;
     border: none;
     opacity: 0; /* Rend les boutons invisibles */
+    width: 100px;
 }
 .btn-carre i {
     color: #00494A;
@@ -32,4 +33,15 @@ h3 {
 .image-avec-texte {
     flex: 4; /* Prend la moitié de l'espace disponible */
     text-align: center;
+}
+.conteneur {
+    margin-top: 50px;
+    display: flex; /* Utiliser la mise en page flexbox pour diviser en deux colonnes */
+    gap: 20px; /* Espacement entre les deux colonnes */
+    /*height: 699px;*/
+}
+.conteneur1{
+    margin-top: 60px;
+    width: 420px;
+    height: 620px;
 }
