@@ -35,12 +35,13 @@ h3 {
     text-align: center;
 }
 .conteneur {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex; /* Utiliser la mise en page flexbox pour diviser en deux colonnes */
     gap: 20px; /* Espacement entre les deux colonnes */
     /*height: 699px;*/
 }
 .conteneur1{
+    margin-top: 60px;
     width: 420px;
     height: 620px;
 }
