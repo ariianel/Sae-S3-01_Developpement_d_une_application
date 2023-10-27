@@ -139,11 +139,12 @@ body {
     height: 50%; 
     left: 3000px;
     margin-top: 30px;
+    font-weight: 100;
     margin-left: 30%;
     font-size: 30px;
     transform: translate(-50%,-50%);
     white-space: nowrap;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #00000038;
 }
 .text-line::after {
   content: '';
@@ -158,11 +159,12 @@ body {
     width: 50%;
     height: 50%; 
     left: 3000px;
+    font-weight: 100;
     margin-top: 80px;
     margin-left: 53%;
     font-size: 30px;
     transform: translate(-50%,-50%);
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #0000004b;
 
 }
 .text-line1::after {
