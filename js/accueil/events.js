@@ -8,9 +8,18 @@ function unhover(){
     this.style.fontSize = "200%";
 }
 
-var vignettes = document.getElementsByClassName('vignette');
-
-for (var i = 0;i<vignettes.length;++i){
-    vignettes[i].addEventListener('mouseover', hover);
-    vignettes[i].addEventListener('mouseout', unhover);
+function hoverMap(){
+    this.setAttribute("fill", "#ffffff");
 }
+
+function unhoverMap(){
+    this.setAttribute("fill", "#002a2c");
+}
+
+var vignettes = $("div.vignette");
+vignettes.mouseover(hover);
+vignettes.mouseout(unhover);
+
+var path = $("path");
+path.mouseover(hoverMap);
+path.mouseout(unhoverMap);
