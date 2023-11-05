@@ -3,9 +3,8 @@
 }
 
 #live-info{
-    width:30%;
+    width:29.75%;
     display:inline-block;
-    height:300px;
     padding-top:2.5%;
 }
 
@@ -14,7 +13,7 @@
 }
 
 #live-img{
-    width:69.65%;
+    width:69.75%;
     height:300px;
     display:inline-block;
     background-image:url('../../../img/tourisme/meteoimg.jpg');
@@ -46,4 +45,15 @@
     margin-left:0;
     width:49%;
     display:inline-block;
+}
+
+@media (max-width : 900px){
+    #live-info{
+        width:100%;
+    }
+
+    #live-img{
+        width:0;
+        height:0;
+    }
 }

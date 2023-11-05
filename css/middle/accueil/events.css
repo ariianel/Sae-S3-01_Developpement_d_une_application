@@ -84,9 +84,27 @@
     color: white;
 }
 
-
 #map{
-    width:49.5%;
+    width:30%;
     display:inline-block;
     vertical-align:top;
+    margin-left:10%;
+}
+
+@media (max-width : 900px){
+    #vignette{
+        width:100%;
+    }
+    
+    .vignette{
+        margin:auto;
+        margin-bottom:30px;
+        width:80%;
+    }
+
+    #map{
+        width:100%;
+        text-align:center;
+        margin-left:15%;
+    }
 }
